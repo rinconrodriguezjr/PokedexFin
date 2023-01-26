@@ -4,10 +4,6 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { ProgressBar } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
-import repeat from "../assets/images/repeat.jpg";
-import repeat1 from "../assets/images/repeat1.jpg";
-import repeat2 from "../assets/images/repeat2.jpg";
-import repeat3 from "../assets/images/repeat2.jpg";
 
 const PokedexDetail = () => {
     
