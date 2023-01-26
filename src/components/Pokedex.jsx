@@ -50,10 +50,12 @@ const Pokedex = () => {
 
     const filterPokemonAbility = e => {
         setPage(1)
+         console.log(e.target.value);
         axios.get(e.target.value)
             .then(res => setPokemons(res.data.pokemon));
     };
 
+    console.log(pokemonsPaginated)
 
     return (
         <div className='pokedexcontainer'>
@@ -99,7 +101,9 @@ const Pokedex = () => {
             </div>
             <div className='pokemon-list'>
                 {pokemonsPaginated?.map(pokemon => (
-                    <PokedexCard url={pokemon.url} key={pokemon.url} />
+                    <PokedexCard
+                     url={pokemon.url? pokemon.url : pokemon.pokemon.url} 
+                    key={pokemon.url? pokemon.url : pokemon.pokemon.url} />
                 ))
 
                 }

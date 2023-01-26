@@ -2,12 +2,13 @@ import axios from 'axios';
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { ProgressBar } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { Button, ProgressBar } from 'react-bootstrap';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const PokedexDetail = () => {
     
     const {id} = useParams();
+const navegate = useNavigate()
 
     const [pokemon, setPokemon] = useState({});
 
@@ -17,10 +18,16 @@ const PokedexDetail = () => {
             .catch(() => alert("Pokemon seleccionado no existe"));
     },[id]);
 
+    const getBackIndex = () =>{
+        navegate('/pokedex')
+    }
     // console.log(pokemon);
 
     return (
         <div className='detailcontainer'>
+        <div>
+            <Button type='submit' variant="danger" onClick={getBackIndex} >Prev Page</Button>{' '}
+        </div>
             {/* <h1> <b>POKEMON DETAIL:</b></h1>*/}
             <br />
             <div className='detailcontainerhead'>

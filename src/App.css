@@ -155,7 +155,8 @@ button{
   height: 100px;
   font-family: 'Pokemon Solid', sans-serif;
   font-size: 40px;
-  color: white;                                       
+  color: white;  
+  margin-top: 2rem;                                     
 }
 
 

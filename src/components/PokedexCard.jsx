@@ -14,7 +14,7 @@ const PokedexCard = ({ url }) => {
             .then(res => setPokemon(res.data));
     }, [])
 
-    // console.log(pokemon);
+   // console.log(pokemon);
 
     return (
         <li className='col'>
